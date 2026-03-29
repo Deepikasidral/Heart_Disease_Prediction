@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+
+# Environment variables
+.env
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+
+# Models (optional - large files)
+saved_models/

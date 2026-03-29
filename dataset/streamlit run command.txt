@@ -1,0 +1,19 @@
+
+streamlit run "C:\Projects\Heart disease_chatbot\heart_disease_ML.py"
+server run - uvicorn server:app --reload
+if (selected == 'Chat for your Heart'):
+    st.title('Welcome to our chatbot!')
+    st.title('Feel free to ask anything...')
+    
+    patterns=[(r'what is heart disease/?',['Heart disease, also known as cardiovascular disease, refers to a class of diseases that involve the heart or blood vessels. It is a broad term that encompasses various conditions, and the most common type is coronary artery disease.']),(r'what are the symptoms of heart disease/?',['nausea or vomiting,chest pain,muscle discomfort,dullness'])]
+    chatbot = util.Chat(patterns, util.reflections)
+
+    
+    while True:
+        uip=st.text_input('Go:-')
+        if uip.lower()=='quit':
+            st.write('Thank you for using our chatbot!')
+            break
+        else:
+            response=chatbot.respond(uip)
+            st.write(response)
